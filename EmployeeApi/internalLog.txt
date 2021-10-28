@@ -1,0 +1,20 @@
+2021-10-28 17:12:06.1924 Info Message Template Auto Format enabled
+2021-10-28 17:12:06.1924 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 17:12:06.2339 Info Adding target FileTarget(Name=alldata)
+2021-10-28 17:12:06.2406 Info Adding target FileTarget(Name=otherFile-web)
+2021-10-28 17:12:06.2656 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Vold\source\repos\AvevaTest\EmployeeApi\bin\Debug\net5.0\nlog.config
+2021-10-28 17:12:49.7816 Info Message Template Auto Format enabled
+2021-10-28 17:12:49.7931 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 17:12:49.8228 Info Adding target FileTarget(Name=alldata)
+2021-10-28 17:12:49.8228 Info Adding target FileTarget(Name=otherFile-web)
+2021-10-28 17:12:49.8546 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Vold\source\repos\AvevaTest\EmployeeApi\bin\Debug\net5.0\nlog.config
+2021-10-28 17:16:04.2941 Info Message Template Auto Format enabled
+2021-10-28 17:16:04.3000 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 17:16:04.3224 Info Adding target FileTarget(Name=alldata)
+2021-10-28 17:16:04.3224 Info Adding target FileTarget(Name=otherFile-web)
+2021-10-28 17:16:04.3376 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Vold\source\repos\AvevaTest\EmployeeApi\bin\Debug\net5.0\nlog.config
+2021-10-28 17:18:20.3488 Info Message Template Auto Format enabled
+2021-10-28 17:18:20.3488 Info Loading assembly: NLog.Web.AspNetCore
+2021-10-28 17:18:20.3901 Info Adding target FileTarget(Name=alldata)
+2021-10-28 17:18:20.3976 Info Adding target FileTarget(Name=otherFile-web)
+2021-10-28 17:18:20.4230 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\Vold\source\repos\AvevaTest\EmployeeApi\bin\Debug\net5.0\nlog.config
