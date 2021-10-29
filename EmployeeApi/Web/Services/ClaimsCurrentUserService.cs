@@ -21,8 +21,7 @@ namespace EmployeeApi.Web.Services
                 //Debug
                 var httpContextAccessor = _httpContextAccessor;
                 var context = httpContextAccessor.HttpContext;
-                var user = context.User;
-                var name = user.FindFirstValue(ClaimTypes.Name);
+                var name = context.User is not null ? context.User.FindFirstValue(ClaimTypes.Name) : "Seed";
                 return name;
             }
         }
