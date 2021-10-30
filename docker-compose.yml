@@ -1,0 +1,32 @@
+version: '3.4'
+
+
+networks:
+  localdev:
+    name: localdev
+
+services:
+  employeeapi:
+    image: ${DOCKER_REGISTRY-}employeeapi
+    build:
+      context: .
+      dockerfile: EmployeeApi/Dockerfile
+    restart: on-failure:5 
+    depends_on:
+      - db-server
+    networks:
+      - localdev
+
+  db-server:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: db-server
+    environment:
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=HelloWorld10
+        - MSSSQL_TCP_PORT=1443
+    ports:
+       - "1440:1433"
+    networks:
+       - localdev
+       
+  
