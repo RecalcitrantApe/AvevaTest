@@ -14,7 +14,6 @@ namespace EmployeeApi.Application.Employees.Queries
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Computer, ComputerDto>();
-                
         }
     }
 }

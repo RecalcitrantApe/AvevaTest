@@ -54,6 +54,5 @@ namespace EmployeeApi.Infrastructure.Persistence
 
             base.OnModelCreating(builder);
         }
-
     }
 }

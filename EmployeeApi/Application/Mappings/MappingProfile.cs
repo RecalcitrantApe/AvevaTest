@@ -8,6 +8,8 @@ using System.Reflection;
 namespace EmployeeApi.Application.Mappings
 {
     //Clever bit of code here. Use reflection to figure out all mappable entities and what they map to.
+    // Could have used pipeline instead https://garywoodfine.com/how-to-use-mediatr-pipeline-behaviours/
+
     public class MappingProfile : Profile
     {
         public MappingProfile()

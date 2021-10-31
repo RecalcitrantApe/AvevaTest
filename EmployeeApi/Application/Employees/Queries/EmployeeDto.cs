@@ -12,24 +12,19 @@ namespace EmployeeApi.Application.Employees.Queries
     public record EmployeeDto : IMapFrom<Employee>
     {
         public int Id { get;  set; }
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-
         public DateTime DateOfBirth { get; set; }
-
         public bool CurrentlyEmployed { get; set; }
 
         public int NumberOfComputers
         {
             get
             {
-                return Computers == null ? 0 : Computers.Count();
-                
+                return Computers == null ? 0 : Computers.Count;
             }
         }
-
 
         public IList<ComputerDto> Computers { get; set; }
 
@@ -40,5 +35,4 @@ namespace EmployeeApi.Application.Employees.Queries
                 .ForMember(x => x.NumberOfComputers, opt => opt.MapFrom(s => s.Computers == null ? 0 : s.Computers.Count));
         }
     }
-
 }

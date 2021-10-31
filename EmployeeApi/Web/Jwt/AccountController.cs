@@ -3,8 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using JwtAuthDemo.Infrastructure;
-using JwtAuthDemo.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -12,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 
-namespace JwtAuthDemo.Controllers
+namespace EmployeeApi.Web.Jwt
 {
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -163,7 +161,7 @@ namespace JwtAuthDemo.Controllers
             var originalUserName = User.FindFirst("OriginalUserName")?.Value;
             if (string.IsNullOrWhiteSpace(originalUserName))
             {
-                return BadRequest("You are not impersonating anyone.");
+                return BadRequest("You are no longer impersonating anyone.");
             }
             _logger.LogInformation($"User [{originalUserName}] is trying to stop impersonate [{userName}].");
 

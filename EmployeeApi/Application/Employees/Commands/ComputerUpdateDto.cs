@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace EmployeeApi.Application.Employees.Commands
+﻿namespace EmployeeApi.Application.Employees.Commands
 {
     public class ComputerUpdateDto
     {

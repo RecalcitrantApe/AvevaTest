@@ -6,7 +6,6 @@ namespace EmployeeApi.Web.Services
 {
     public class ClaimsCurrentUserService : ICurrentUserService
     {
-
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public ClaimsCurrentUserService(IHttpContextAccessor httpContextAccessor)
@@ -18,7 +17,6 @@ namespace EmployeeApi.Web.Services
         { 
             get
             {
-                //Debug
                 var httpContextAccessor = _httpContextAccessor;
                 var context = httpContextAccessor.HttpContext;
                 var name = context.User is not null ? context.User.FindFirstValue(ClaimTypes.Name) : "Seed";
@@ -26,7 +24,5 @@ namespace EmployeeApi.Web.Services
             }
         }
 
-
-       // public string UserId => _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
     }
 }

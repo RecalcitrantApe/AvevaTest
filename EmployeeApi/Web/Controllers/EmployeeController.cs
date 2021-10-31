@@ -77,8 +77,6 @@ namespace EmployeeApi.Web.Controllers
 
 
         [HttpPatch("{employeeId}")]
-        
-      //public ActionResult<FileRecordDto> Patch(int id, [FromBody] JsonPatchDocument<FileRecordQueryParams> patchDoc)
         public async Task<IActionResult> PartialUpdate(int employeeId, [FromBody] JsonPatchDocument<EmployeeDto> patch)
         {
             try

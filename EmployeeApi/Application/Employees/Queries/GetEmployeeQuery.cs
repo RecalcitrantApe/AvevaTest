@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper.QueryableExtensions;
 using EmployeeApi.Application.Exceptions;
 using EmployeeApi.Application.Common.Interfaces;
+using EmployeeApi.Infrastructure.Persistence;
 
 namespace EmployeeApi.Application.Employees.Queries
 {
@@ -28,6 +29,8 @@ namespace EmployeeApi.Application.Employees.Queries
         {
             this.context = context;
             this.mapper = mapper;
+
+
         }
 
         public async Task<EmployeeDto> Handle(GetEmployeeQuery request, CancellationToken cancellationToken)

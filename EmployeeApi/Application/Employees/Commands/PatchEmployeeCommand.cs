@@ -68,11 +68,10 @@ namespace EmployeeApi.Application.Employees.Commands
 
                 context.Employees.Attach(entity);
 
-
                 await context.SaveChangesAsync(cancellationToken);
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new EntityInvalidException("Invalid state");
             }

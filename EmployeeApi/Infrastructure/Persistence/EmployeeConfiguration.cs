@@ -37,13 +37,9 @@ namespace EmployeeApi.Infrastructure.Persistence
               .OwnsOne(b => b.DateOfBirth)
               .Ignore(x => x.Day);
 
-
-
             builder
               .OwnsOne(b => b.Email)
               .Property(p => p.EmailString).IsRequired().HasMaxLength(200);
-
-
 
             builder.Property(t => t.CurrentlyEmployed)
                 .IsRequired();

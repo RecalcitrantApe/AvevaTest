@@ -40,31 +40,16 @@ namespace EmployeeApi.Application.Employees.Commands
             }
 
             //Only add the top entity
-            entity = new Employee();
-
-            entity.FirstName = request.FirstName;
-            entity.LastName = request.LastName;
-            entity.DateOfBirth = DateOnly.From(request.DateOfBirth);
-            entity.Email = Email.From(request.Email);
-            entity.CurrentlyEmployed = request.CurrentlyEmployed;
+            entity = new Employee
+            {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                DateOfBirth = DateOnly.From(request.DateOfBirth),
+                Email = Email.From(request.Email),
+                CurrentlyEmployed = request.CurrentlyEmployed
+            };
 
             context.Employees.Add(entity);
-
-            //context.Employees.Add(new Entities.Employee
-            //{
-            //    FirstName = "EmployeeTwo",
-            //    LastName = "TwoSon",
-            //    Email = Email.From("emplo1yee2@org.com"),
-            //    DateOfBirth = DateOnly.From(new DateTime(1995, 1, 1)),
-            //    CurrentlyEmployed = true,
-
-            //    Computers =
-            //        {
-            //            new Entities.Computer { Name = "Dell", Description = "Nice Dell1" },
-            //            new Entities.Computer { Name = "Dell", Description = "Nice Dell2" },
-            //        }
-            //});
-
 
             await context.SaveChangesAsync(cancellationToken);
 

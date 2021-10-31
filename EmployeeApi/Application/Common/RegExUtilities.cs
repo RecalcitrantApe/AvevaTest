@@ -17,8 +17,8 @@ namespace EmployeeApi.Application.Common
                     email = Regex.Replace(email, @"(@)(.+)$", DomainMapper,
                                           RegexOptions.None, TimeSpan.FromMilliseconds(200));
 
-                    // Examines the domain part of the email and normalizes it.
-                    string DomainMapper(Match match)
+                // Examines the domain part of the email and normalizes it.
+                static string DomainMapper(Match match)
                     {
                         // Use IdnMapping class to convert Unicode domain names.
                         var idn = new IdnMapping();
@@ -50,5 +50,4 @@ namespace EmployeeApi.Application.Common
                 }
             }
         }
-   
 }

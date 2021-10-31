@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 
-namespace JwtAuthDemo.Services
+namespace EmployeeApi.Web.Jwt
 {
     public interface IUserService
     {

@@ -1,4 +1,6 @@
-﻿//using Microsoft.AspNetCore.Mvc;
+﻿//// This class I made just as an example of tight coupling
+
+//using Microsoft.AspNetCore.Mvc;
 //using Microsoft.Extensions.Logging;
 
 //namespace EmployeeApi.Web.Controllers
