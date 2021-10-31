@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AvevaTest\EmployeeApi\EmployeeApi.csproj" />
+    <ProjectReference Include="..\EmployeeApi\EmployeeApi.csproj" />
   </ItemGroup>
 
 </Project>
